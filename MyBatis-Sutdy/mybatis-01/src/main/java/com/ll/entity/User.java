@@ -7,7 +7,6 @@ package com.ll.entity;
  * @Data: 2020年06月28日 21:00:00
  * @Version: 1.0
  **/
-//实体类
 public class User {
     private int id;
     private String name;
