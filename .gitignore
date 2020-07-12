@@ -33,7 +33,7 @@ hs_err_pid*
 docs/_book
 
 # TODO: where does this rule come from?
-test/
+# test/
 
 ### Example user template template
 ### Example user template
