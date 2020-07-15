@@ -11,7 +11,7 @@ public class UserT {
     private String name;
 
     public UserT() {
-        System.out.println("努力找工作");
+        System.out.println("UserT无参构造创建了：");
     }
 
     public UserT(String name) {

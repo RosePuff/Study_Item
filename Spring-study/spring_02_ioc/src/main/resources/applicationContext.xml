@@ -22,8 +22,16 @@
         <constructor-arg name="name" value="努力找工作"/>
     </bean>
 
-    <bean id="userT" class="com.chin.entity.UserT"/>
-    <!--别名配置-->
-    <alias name="user" alias="lajdlasjsajdasdjlasdjl"/>
+    <!--
+        id：bean的唯一标识符，相当于对象名
+        class：bean对象所对应的全限定名
+        name：同时也是别名，可以同时取多个别名,可以通过逗号分割，也可以通过分号，空格分割取不同的别名
+        -->
+    <bean id="userT" class="com.chin.entity.UserT" name="t,t2 t3" scope="prototype">
+        <property name="name" value="找工作中"/>
+    </bean>
+
+    <import resource="beans.xml"/>
+    <import resource="beans2.xml"/>
 
 </beans>
