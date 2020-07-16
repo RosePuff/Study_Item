@@ -13,6 +13,7 @@
         <module>spring_02_HelloSpring</module>
         <module>spring_02_ioc</module>
         <module>spring_03_DI</module>
+        <module>spring_04_Autowired</module>
     </modules>
 
     <dependencies>
