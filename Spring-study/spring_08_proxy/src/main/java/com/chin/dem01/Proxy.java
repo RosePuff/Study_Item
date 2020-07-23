@@ -1,4 +1,4 @@
-package com.chin.dem_one;
+package com.chin.dem01;
 
 /**
  * @ClassName: Proxy

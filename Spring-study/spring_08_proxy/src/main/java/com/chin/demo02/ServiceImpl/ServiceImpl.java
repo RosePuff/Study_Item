@@ -1,6 +1,6 @@
-package com.chin.demo_two.ServiceImpl;
+package com.chin.demo02.ServiceImpl;
 
-import com.chin.demo_two.Service.Service;
+import com.chin.demo02.Service.Service;
 
 /**
  * @ClassName: ServiceImpl
