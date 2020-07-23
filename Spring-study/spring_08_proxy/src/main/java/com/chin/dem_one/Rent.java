@@ -1,4 +1,4 @@
-package com.chin.demoOne;
+package com.chin.dem_one;
 
 /**
  * @ClassName: Rent

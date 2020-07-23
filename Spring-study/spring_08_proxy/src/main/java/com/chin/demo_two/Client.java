@@ -1,7 +1,7 @@
-package com.chin.demoTwo;
+package com.chin.demo_two;
 
-import com.chin.demoTwo.Proxy.ServiceProxy;
-import com.chin.demoTwo.ServiceImpl.ServiceImpl;
+import com.chin.demo_two.Proxy.ServiceProxy;
+import com.chin.demo_two.ServiceImpl.ServiceImpl;
 
 /**
  * @ClassName: Client
