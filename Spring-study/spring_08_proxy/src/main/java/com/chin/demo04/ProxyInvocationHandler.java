@@ -28,12 +28,14 @@ public class ProxyInvocationHandler implements InvocationHandler {
     // 处理代理实例，并且返回结果
     @Override
     public Object invoke(Object proxy, Method method, Object[] args) throws Throwable {
+        log(method.getName());
         // 动态代理的本质使用的就是反射机制
         Object result = method.invoke(target, args);
         return result;
     }
 
-    public void seeHost() {
-        System.out.println("看房子");
+    public void log(String msg){
+        System.out.println("执行了" +msg+"方法");
     }
+
 }

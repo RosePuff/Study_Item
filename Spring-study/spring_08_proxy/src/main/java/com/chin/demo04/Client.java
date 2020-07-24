@@ -1,5 +1,6 @@
 package com.chin.demo04;
 
+import com.chin.demo02.Service.Service;
 import com.chin.demo02.ServiceImpl.ServiceImpl;
 
 /**
@@ -12,7 +13,16 @@ import com.chin.demo02.ServiceImpl.ServiceImpl;
 public class Client {
 
     public static void main(String[] args) {
+        // 真实角色
         ServiceImpl service = new ServiceImpl();
+        // 代理角色
+        ProxyInvocationHandler handler = new ProxyInvocationHandler();
 
+        handler.setTarget(service);
+
+        // 动态生成代理类
+        Service proxy = (Service) handler.getProxy();
+
+        proxy.add();
     }
 }
