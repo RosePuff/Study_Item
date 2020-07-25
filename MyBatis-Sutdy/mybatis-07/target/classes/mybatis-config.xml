@@ -2,9 +2,9 @@
 <!DOCTYPE configuration
         PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
         "http://mybatis.org/dtd/mybatis-3-config.dtd">
-<!--configuration核心配置文件-->
+<!--configuration鏍稿績閰嶇疆鏂囦欢-->
 <configuration>
-    <!--引入外部属性配置文件-->
+    <!--寮曞叆澶栭儴灞炴?ч厤缃枃浠?-->
     <!--    <properties resource="sql-config.properties">-->
     <properties resource="sql-config.properties"/>
 
@@ -12,7 +12,7 @@
         <setting name="logImpl" value="STDOUT_LOGGING"/>
     </settings>
 
-    <!--类型别名（typeAliases）-->
+    <!--绫诲瀷鍒悕锛坱ypeAliases锛?-->
     <typeAliases>
         <package name="com.ll.entity"/>
     </typeAliases>
@@ -20,12 +20,12 @@
          <typeAlias type="com.ll.entity" alias="pojo"/>
      </typeAliases>-->
 
-    <!--defuel：切换默认环境-->
+    <!--defuel锛氬垏鎹㈤粯璁ょ幆澧?-->
     <environments default="development">
         <environment id="development">
-            <!--事务管理器-->
+            <!--浜嬪姟绠＄悊鍣?-->
             <transactionManager type="JDBC"/>
-            <!--数据源-->
+            <!--鏁版嵁婧?-->
             <dataSource type="POOLED">
                 <property name="driver" value="${driver}"/>
                 <property name="url" value="${url}"/>
@@ -35,7 +35,7 @@
         </environment>
     </environments>
 
-    <!--绑定接口-->
+    <!--缁戝畾鎺ュ彛-->
     <mappers>
         <mapper class="com.ll.mapper.TeacherMapper"/>
         <mapper class="com.ll.mapper.StudentMapper"/>

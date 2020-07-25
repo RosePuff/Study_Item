@@ -12,7 +12,7 @@
     <resultMap id="StudentTeacher" type="Student">
         <result property="id" column="id"/>
         <result property="name" column="name"/>
-        <!--复杂的属性，我们需要单独处理 对象： association 集合： collection -->
+        <!--澶嶆潅鐨勫睘鎬э紝鎴戜滑闇?瑕佸崟鐙鐞? 瀵硅薄锛? association 闆嗗悎锛? collection -->
         <association property="teacher" column="tid" javaType="Teacher" select="getTeacher"/>
     </resultMap>
 

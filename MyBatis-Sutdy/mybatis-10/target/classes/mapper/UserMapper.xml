@@ -3,7 +3,7 @@
         PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
         "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="com.ll.mapper.UserMapper">
-    <!--在当前的Mapper中开启二级缓存-->
+    <!--鍦ㄥ綋鍓嶇殑Mapper涓紑鍚簩绾х紦瀛?-->
     <cache
             eviction="FIFO"
             flushInterval="60000"
