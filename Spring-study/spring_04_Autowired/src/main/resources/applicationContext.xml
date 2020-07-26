@@ -4,10 +4,10 @@
        xsi:schemaLocation="http://www.springframework.org/schema/beans
         https://www.springframework.org/schema/beans/spring-beans.xsd">
 
-    <bean id="cat" class="com.chin.entity.Cat"/>
-    <bean id="dog" class="com.chin.entity.Dog"/>
+    <bean id="cat" class="com.chin.com.chin.entity.Cat"/>
+    <bean id="dog" class="com.chin.com.chin.entity.Dog"/>
 
-    <bean id="people" class="com.chin.entity.People" autowire="byName">
+    <bean id="people" class="com.chin.com.chin.entity.People" autowire="byName">
         <property name="name" value="chin"/>
         <!--<property name="cat" ref="cat"/>
         <property name="dog" ref="dog"/>-->

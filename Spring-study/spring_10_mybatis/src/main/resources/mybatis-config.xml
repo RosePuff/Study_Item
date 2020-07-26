@@ -9,7 +9,7 @@
     </settings>
 
     <typeAliases>
-        <package name="com.chin.entity"/>
+        <package name="com.chin.com.chin.entity"/>
     </typeAliases>
 
 </configuration>

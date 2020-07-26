@@ -6,9 +6,9 @@
         https://www.springframework.org/schema/beans/spring-beans.xsd">
 
     <!--P命名空间注入，property-->
-    <bean id="user" class="com.chin.entity.User" p:name="刘钦华" p:age="25"/>
+    <bean id="user" class="com.chin.com.chin.entity.User" p:name="刘钦华" p:age="25"/>
 
     <!--C命名空间注入，Construct-->
-    <bean id="user2" class="com.chin.entity.User" c:age="25" c:name="刘钦华" scope="prototype"/>
+    <bean id="user2" class="com.chin.com.chin.entity.User" c:age="25" c:name="刘钦华" scope="prototype"/>
 </beans>
 

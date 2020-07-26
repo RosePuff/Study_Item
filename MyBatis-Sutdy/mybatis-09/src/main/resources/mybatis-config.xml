@@ -15,10 +15,10 @@
 
     <!--类型别名（typeAliases）-->
     <typeAliases>
-        <package name="com.ll.entity"/>
+        <package name="com.ll.com.chin.entity"/>
     </typeAliases>
     <!-- <typeAliases>
-         <typeAlias type="com.ll.entity" alias="pojo"/>
+         <typeAlias type="com.ll.com.chin.entity" alias="pojo"/>
      </typeAliases>-->
 
     <!--defuel：切换默认环境-->

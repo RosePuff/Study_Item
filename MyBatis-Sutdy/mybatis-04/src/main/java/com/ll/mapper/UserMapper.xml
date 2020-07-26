@@ -5,7 +5,7 @@
 <!--namespace=绑定一个对应的Dao/Mapper接口-->
 <mapper namespace="com.ll.mapper.UserMapper">
 
-    <!--<select id="getUserList" resultType="com.ll.entity.User">-->
+    <!--<select id="getUserList" resultType="com.ll.com.chin.entity.User">-->
     <select id="getUserList" resultType="User">
         select *
         from mybatis.user

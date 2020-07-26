@@ -4,21 +4,21 @@
        xsi:schemaLocation="http://www.springframework.org/schema/beans
         https://www.springframework.org/schema/beans/spring-beans.xsd">
     <!--直接使用是无参构造创建-->
-    <!--   <bean id="user" class="com.chin.entity.User">
+    <!--   <bean id="user" class="com.chin.com.chin.entity.User">
            <property name="name" value="找工作中"/>
        </bean>-->
 
     <!--构造函数参数索引，下标赋值-->
-    <!-- <bean id="user" class="com.chin.entity.User">
+    <!-- <bean id="user" class="com.chin.com.chin.entity.User">
          <constructor-arg index="0" value="积极寻找工作"/>
      </bean>-->
 
     <!--通过类型创建对象，不建议使用-->
-    <!-- <bean id="user" class="com.chin.entity.User">
+    <!-- <bean id="user" class="com.chin.com.chin.entity.User">
          <constructor-arg type="java.lang.String" value="找工作"/>
      </bean>-->
 
-    <bean id="user" class="com.chin.entity.User">
+    <bean id="user" class="com.chin.com.chin.entity.User">
         <constructor-arg name="name" value="努力找工作"/>
     </bean>
 
@@ -27,7 +27,7 @@
         class：bean对象所对应的全限定名
         name：同时也是别名，可以同时取多个别名,可以通过逗号分割，也可以通过分号，空格分割取不同的别名
         -->
-    <bean id="userT" class="com.chin.entity.UserT" name="t,t2 t3" scope="prototype">
+    <bean id="userT" class="com.chin.com.chin.entity.UserT" name="t,t2 t3" scope="prototype">
         <property name="name" value="找工作中"/>
     </bean>
 
