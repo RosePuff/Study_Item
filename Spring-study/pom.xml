@@ -18,6 +18,7 @@
         <module>spring_07_appConfig</module>
         <module>spring_08_proxy</module>
         <module>spring_09_AOP</module>
+        <module>spring_10_mybatis</module>
     </modules>
 
     <dependencies>
@@ -31,7 +32,7 @@
         <dependency>
             <groupId>junit</groupId>
             <artifactId>junit</artifactId>
-            <version>4.12</version>
+            <version>4.13</version>
             <scope>test</scope>
         </dependency>
     </dependencies>
