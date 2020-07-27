@@ -1,8 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <beans xmlns="http://www.springframework.org/schema/beans"
        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:tx="http://www.springframework.org/schema/tx" xmlns:aop="http://www.springframework.org/schema/aop"
        xsi:schemaLocation="http://www.springframework.org/schema/beans
-        https://www.springframework.org/schema/beans/spring-beans.xsd">
+        https://www.springframework.org/schema/beans/spring-beans.xsd
+        http://www.springframework.org/schema/tx
+        http://www.springframework.org/schema/tx/spring-tx.xsd http://www.springframework.org/schema/aop https://www.springframework.org/schema/aop/spring-aop.xsd">
 
     <!--DataSource：使用Spring的数据源替换MyBatis的配置 c3p0 dbcp druid-->
     <bean id="dataSource" class="org.springframework.jdbc.datasource.DriverManagerDataSource">
@@ -25,5 +28,26 @@
         <!--这里只能选择构造器注入，因为这里没有set方法-->
         <constructor-arg index="0" ref="sqlSessionFactory"/>
     </bean>
+    <!--配置声明式事务-->
+    <bean id="transactionManager" class="org.springframework.jdbc.datasource.DataSourceTransactionManager">
+        <constructor-arg ref="dataSource"/>
+    </bean>
+    <!--结合AOP进行织入事务-->
+    <tx:advice id="txAdvice" transaction-manager="transactionManager">
+        <!--给某些方法配置配置事务-->
+        <tx:attributes>
+            <tx:method name="insert" propagation="REQUIRED"/>
+            <tx:method name="delete" propagation="REQUIRED"/>
+            <tx:method name="select" read-only="true"/>
+            <tx:method name="update" propagation="REQUIRED"/>
+            <tx:method name="*" propagation="REQUIRED"/>
+        </tx:attributes>
+    </tx:advice>
+    
+    <!--配置事务切入-->
+    <aop:config>
+        <aop:pointcut id="txPointcut" expression="execution(* com.chin.mapper.*.*(..))"/>
+        <aop:advisor advice-ref="txAdvice" pointcut-ref="txPointcut"/>
+    </aop:config>
 
 </beans>

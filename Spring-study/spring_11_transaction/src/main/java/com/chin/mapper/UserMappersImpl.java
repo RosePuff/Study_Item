@@ -16,12 +16,12 @@ public class UserMappersImpl extends SqlSessionDaoSupport implements UserMappers
 
     @Override
     public List<User> selectUser() {
-        User user = new User(10, "校长", "12312435");
+        User user = new User(11, "校长", "12312435");
 
         UserMappers mapper = getSqlSession().getMapper(UserMappers.class);
 
         mapper.insertUser(user);
-        mapper.deleteUser(8);
+        mapper.deleteUser(5);
 
         return mapper.selectUser();
     }
