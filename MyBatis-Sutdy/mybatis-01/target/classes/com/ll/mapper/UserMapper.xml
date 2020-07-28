@@ -2,22 +2,22 @@
 <!DOCTYPE mapper
         PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
         "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
-<!--namespace=缁戝畾涓?涓搴旂殑Dao/Mapper鎺ュ彛-->
+<!--namespace=绑定一个对应的Dao/Mapper接口-->
 <mapper namespace="com.ll.mapper.UserMapper">
 
-    <select id="getUserList" resultType="com.ll.entity.User">
+    <select id="getUserList" resultType="com.ll.com.chin.entity.User">
        select * from mybatis.user
    </select>
 
-    <select id="getUserById" parameterType="int" resultType="com.ll.entity.User">
+    <select id="getUserById" parameterType="int" resultType="com.ll.com.chin.entity.User">
         SELECT * FROM mybatis.user WHERE id = #{id};
     </select>
 
-    <select id="getUserById2" parameterType="map" resultType="com.ll.entity.User">
+    <select id="getUserById2" parameterType="map" resultType="com.ll.com.chin.entity.User">
         SELECT * FROM mybatis.user WHERE id = #{id} AND name = #{name};
     </select>
 
-    <insert id="insertUser" parameterType="com.ll.entity.User">
+    <insert id="insertUser" parameterType="com.ll.com.chin.entity.User">
         insert into mybatis.user (id, name, pwd) values (#{id},#{name},#{pwd});
     </insert>
 
@@ -25,7 +25,7 @@
         INSERT INTO mybatis.user (id, name, pwd) values(#{userId},#{userName},#{passWord})
     </insert>
 
-    <update id="updateUser" parameterType="com.ll.entity.User">
+    <update id="updateUser" parameterType="com.ll.com.chin.entity.User">
         update mybatis.user set name = #{name}, pwd=#{pwd} where id = #{id};
     </update>
 

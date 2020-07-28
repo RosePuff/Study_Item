@@ -2,33 +2,33 @@
 <!DOCTYPE configuration
         PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
         "http://mybatis.org/dtd/mybatis-3-config.dtd">
-<!--configuration鏍稿績閰嶇疆鏂囦欢-->
+<!--configuration核心配置文件-->
 <configuration>
-    <!--寮曞叆澶栭儴灞炴?ч厤缃枃浠?-->
+    <!--引入外部属性配置文件-->
     <!--    <properties resource="sql-config.properties">-->
     <properties resource="sql-config.properties"/>
 
     <settings>
-        <!--鏍囧噯鐨勬棩蹇楀伐鍘傚疄鐜?-->
+        <!--标准的日志工厂实现-->
         <setting name="logImpl" value="STDOUT_LOGGING"/>
-        <!--鏄剧ず寮?鍚叏灞?缂撳瓨-->
+        <!--显示开启全局缓存-->
         <setting name="cacheEnabled" value="true"/>
     </settings>
 
-    <!--绫诲瀷鍒悕锛坱ypeAliases锛?-->
+    <!--类型别名（typeAliases）-->
     <typeAliases>
-        <package name="com.ll.entity"/>
+        <package name="com.ll.com.chin.entity"/>
     </typeAliases>
     <!-- <typeAliases>
-         <typeAlias type="com.ll.entity" alias="pojo"/>
+         <typeAlias type="com.ll.com.chin.entity" alias="pojo"/>
      </typeAliases>-->
 
-    <!--defuel锛氬垏鎹㈤粯璁ょ幆澧?-->
+    <!--defuel：切换默认环境-->
     <environments default="development">
         <environment id="development">
-            <!--浜嬪姟绠＄悊鍣?-->
+            <!--事务管理器-->
             <transactionManager type="JDBC"/>
-            <!--鏁版嵁婧?-->
+            <!--数据源-->
             <dataSource type="POOLED">
                 <property name="driver" value="${driver}"/>
                 <property name="url" value="${url}"/>
@@ -38,7 +38,7 @@
         </environment>
     </environments>
 
-    <!--缁戝畾鎺ュ彛-->
+    <!--绑定接口-->
     <mappers>
         <!--        <mapper class="com.ll.mapper.BlogMapper"/>-->
         <mapper resource="mapper/UserMapper.xml"/>

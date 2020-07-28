@@ -2,18 +2,18 @@
 <!DOCTYPE mapper
         PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
         "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
-<!--namespace=缁戝畾涓?涓搴旂殑Dao/Mapper鎺ュ彛-->
+<!--namespace=绑定一个对应的Dao/Mapper接口-->
 <mapper namespace="com.ll.mapper.UserMapper">
 
-    <!--<select id="getUserList" resultType="com.ll.entity.User">-->
+    <!--<select id="getUserList" resultType="com.ll.com.chin.entity.User">-->
     <select id="getUserList" resultType="User">
         select *
         from mybatis.user
     </select>
 
-    <!--缁撴灉闆嗘槧灏?-->
+    <!--结果集映射-->
     <resultMap id="UserMap" type="User">
-        <!--column锛氭暟鎹簱涓殑瀛楁 property锛氬疄浣撶被涓殑灞炴??-->
+        <!--column：数据库中的字段 property：实体类中的属性-->
         <result column="pwd" property="password"/>
     </resultMap>
 

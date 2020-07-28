@@ -4,11 +4,11 @@
        xsi:schemaLocation="http://www.springframework.org/schema/beans
         https://www.springframework.org/schema/beans/spring-beans.xsd http://www.springframework.org/schema/util https://www.springframework.org/schema/util/spring-util.xsd">
 
-    <bean id="address" class="com.chin.entity.Address">
+    <bean id="address" class="com.chin.com.chin.entity.Address">
         <property name="address" value="刘钦华"/>
     </bean>
 
-    <bean id="student" class="com.chin.entity.Student">
+    <bean id="student" class="com.chin.com.chin.entity.Student">
         <!--第一种，普通注入，value-->
         <property name="name" value="DI注入"/>
         <!--第二种，Bean注入，ref-->

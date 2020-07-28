@@ -12,10 +12,10 @@
     <!--开启注解的支持-->
     <context:annotation-config/>
 
-    <bean id="cat" class="com.chin.entity.Cat"/>
-    <bean id="dog" class="com.chin.entity.Dog"/>
+    <bean id="cat" class="com.chin.com.chin.entity.Cat"/>
+    <bean id="dog" class="com.chin.com.chin.entity.Dog"/>
 
-    <bean id="people" class="com.chin.entity.People"/>
+    <bean id="people" class="com.chin.com.chin.entity.People"/>
 
 
 </beans>

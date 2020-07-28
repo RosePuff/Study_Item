@@ -8,7 +8,7 @@
         https://www.springframework.org/schema/aop/spring-aop.xsd">
     <import resource="spring-dao.xml"/>
 
-    <bean id="userMapper" class="com.chin.mapper.UserMapperImpl">
+    <bean id="userMappers" class="com.chin.mapper.UserMappersImpl">
         <property name="sqlSession" ref="sqlSession"/>
     </bean>
 
