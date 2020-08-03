@@ -22,7 +22,8 @@ public class OneController implements Controller {
         //封装对象，放在ModelAndView中。Model
         view.addObject("msg", "HelloSpringMVC!");
         //封装要跳转的视图，放在ModelAndView中
-        view.setViewName("hello"); //: /WEB-INF/jsp/hello.jsp
+        view.setViewName("hello");
+        // 路径：/WEB-INF/jsp/hello.jsp
         return view;
 
     }
