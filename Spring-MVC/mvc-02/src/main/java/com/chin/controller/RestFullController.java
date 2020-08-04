@@ -5,18 +5,20 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 /**
- * @ClassName: ControllerTest1
+ * @ClassName: RestFullController
  * @Description: TODO 类描述
  * @Author: LQH
  * @Date: 2020/08/03
  * @Version: 1.0
  **/
 @Controller
-public class ControllerTest1 {
+public class RestFullController {
 
-    @RequestMapping("/t1")
-    public String test1(Model model) {
-        model.addAttribute("msg", "ControllerTest");
-        return "test2";
+    @RequestMapping("/add")
+    public String Test1(int a, int b, Model model) {
+        int res = a + b;
+        model.addAttribute("msg", "结果为" + res);
+        return "test";
     }
+
 }

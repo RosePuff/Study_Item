@@ -17,5 +17,5 @@
     </bean>
 
 
-    <bean id="/hello" class="com.chin.controller.OneController"/>
+    <bean id="/hello" class="com.chin.controller.controller.OneController"/>
 </beans>

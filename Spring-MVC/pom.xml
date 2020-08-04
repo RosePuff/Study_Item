@@ -11,6 +11,8 @@
     <modules>
         <module>mvc-01</module>
         <module>mvc-02</module>
+        <module>mvc-03</module>
+        <module>mvc-05-json</module>
     </modules>
 
 
@@ -39,6 +41,12 @@
             <groupId>javax.servlet</groupId>
             <artifactId>jstl</artifactId>
             <version>1.2</version>
+        </dependency>
+
+        <dependency>
+            <groupId>org.projectlombok</groupId>
+            <artifactId>lombok</artifactId>
+            <version>1.18.12</version>
         </dependency>
 
     </dependencies>
