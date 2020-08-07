@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>页面无刷新</title>
+
+    <script>
+        function goTo() {
+            var url = document.getElementById("url").value;
+            document.getElementById("iframe1").src = url;
+        }
+    </script>
+</head>
+<body>
+
+<div>
+    <p>请输入地址： </p>
+    <p>
+        <input type="text" id="url" value="">
+        <input type="button" value="提交" onclick="goTo()">
+    </p>
+</div>
+
+<div>
+    <iframe id="iframe1" src="" frameborder="0"
+            style="width: 100%;height: 500px"></iframe>
+</div>
+</body>
+</html>
