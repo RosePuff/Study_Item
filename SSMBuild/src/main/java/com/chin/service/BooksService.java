@@ -22,4 +22,6 @@ public interface BooksService {
 
     List<Books> selectAllBooks();
 
+    Books queryBookByName(String bookName);
+
 }

@@ -23,4 +23,6 @@ public interface BookMapper {
 
     List<Books> selectAllBooks();
 
+    Books queryBookByName(@Param("bookName") String bookName);
+
 }

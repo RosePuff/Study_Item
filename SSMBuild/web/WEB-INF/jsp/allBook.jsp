@@ -19,11 +19,20 @@
                 </h1>
             </div>
         </div>
-    </div>
 
-    <div class="row">
-        <div class="col-md-4 column">
-            <a class="btn btn-primary" href="${pageContext.request.contextPath}/book/toInsertBook">新增</a>
+        <div class="row">
+            <div class="col-md-4 column">
+                <a class="btn btn-primary" href="${pageContext.request.contextPath}/book/toInsertBook">新增</a>
+                <a class="btn btn-primary" href="${pageContext.request.contextPath}/book/allBook">显示全部书籍</a>
+            </div>
+            <div class="col-md-8 column">
+                <form class="form-inline" action="${pageContext.request.contextPath}/book/queryBook" method="post"
+                      style="float: right">
+                    <span style="color: red; font-weight: bold">${ERROR}</span>
+                    <input type="text" name="queryBookName" class="form-control" placeholder="请输入需要查询的书籍名称">
+                    <input type="submit" value="查询" class="btn btn-primary">
+                </form>
+            </div>
         </div>
     </div>
 
@@ -49,7 +58,6 @@
                         <td>${book.getDetail()}</td>
                         <td>
                             <a href="${pageContext.request.contextPath}/book/toUpdateBook?id=${book.getBookId()}">更改</a>
-                            |
                             <a href="${pageContext.request.contextPath}/book/delete/${book.getBookId()}">删除</a>
                         </td>
                     </tr>

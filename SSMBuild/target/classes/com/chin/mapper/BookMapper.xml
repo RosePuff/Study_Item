@@ -31,7 +31,14 @@
 
     <select id="selectAllBooks" resultType="Books">
         SELECT *
+        FROM ssmbuild.books;
+    </select>
+
+    <select id="queryBookByName" resultType="Books">
+<!--        <bind name="name" value="'%' + bookName + '%'"/>-->
+        SELECT *
         FROM ssmbuild.books
+        WHERE book_name = #{bookName};
     </select>
 
 </mapper>
