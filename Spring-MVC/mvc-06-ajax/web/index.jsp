@@ -14,8 +14,10 @@
     function o() {
       $.post({
         url: "${pageContext.request.contextPath}/a1",
-        data: {"name": $("username").val()},
-        success: function (data) {
+        data: {"name": $("#username").val()},
+        success: function (data, status) {
+          console.log("data = " + data);
+          console.log("status = " + status);
           alert(data);
         }
       })
@@ -24,8 +26,6 @@
 </head>
 <body>
 
-<label for="username">用户名：
-  <input type="text" id="username" onblur="o()">
-</label>
+用户名：<input type="text" id="username" onblur="o()">
 </body>
 </html>

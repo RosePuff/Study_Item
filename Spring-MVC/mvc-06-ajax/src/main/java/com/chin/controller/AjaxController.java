@@ -1,10 +1,13 @@
 package com.chin.controller;
 
+import com.chin.entity.User;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
+import java.util.ArrayList;
+import java.util.List;
 
 /**
  * @ClassName: AjaxController
@@ -29,5 +32,15 @@ public class AjaxController {
         } else {
             response.getWriter().println("false");
         }
+    }
+
+    @RequestMapping("/a2")
+    public List<User> a2() {
+        List<User> userList = new ArrayList<User>();
+        userList.add(new User("chin", 25, "男"));
+        userList.add(new User("开发", 22, "男"));
+        userList.add(new User("实际", 215, "男"));
+        userList.add(new User("运维", 4, "女"));
+        return userList;
     }
 }
