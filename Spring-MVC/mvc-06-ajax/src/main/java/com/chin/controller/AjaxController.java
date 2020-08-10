@@ -43,4 +43,24 @@ public class AjaxController {
         userList.add(new User("运维", 4, "女"));
         return userList;
     }
+
+    @RequestMapping("/a3")
+    public String a3(String name, String password) {
+        String msg = "";
+        if (name != null) {
+            if ("admin".equals(name)) {
+                msg = "OK";
+            } else {
+                msg = "用户名错误";
+            }
+        }
+        if (password != null) {
+            if ("123456".equals(password)) {
+                msg = "OK";
+            } else {
+                msg = "密码Error";
+            }
+        }
+        return msg;
+    }
 }
