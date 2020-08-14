@@ -1,15 +1,17 @@
-person:
-  name: chin
-  age: 25
-  happy: false
-  birth: 2020/08/14
-  maps: {key: value1,key2: value2}
-  lists:
-    - code
-    - music
-    - girl
-    - boy
-    - delete
-  dog:
-    name: ÅÝÜ½
-    age: 4
+#person:
+#  name: chin
+#  age: 25
+#  happy: false
+#  birth: 2020/08/14
+#  maps: {key: value1,key2: value2}
+#  lists:
+#    - code
+#    - music
+#    - girl
+#    - boy
+#    - delete
+#  dog:
+#    name: æ³¡èŠ™
+#    age: 4
+server:
+  port: 8083
