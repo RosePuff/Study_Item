@@ -1,7 +1,10 @@
 package com.chin.controller;
 
+import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+
+import java.util.Arrays;
 
 /**
  * @ClassName: IndexController
@@ -11,11 +14,16 @@ import org.springframework.web.bind.annotation.RestController;
  * @Version: 1.0
  **/
 
-@RestController
+@Controller
 public class IndexController {
 
     @RequestMapping("/index")
-    public String index() {
+    public String index(Model model) {
+        model.addAttribute("msg", "<h1>hello world</h1>");
+
+        model.addAttribute("lists", Arrays.asList("cat", "dog", "chin"));
         return "index";
     }
+
+
 }

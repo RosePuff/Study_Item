@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h1>Chin，初始化</h1>
+<!--View层-->
+<div id="app">
+    <span v-bind:title="message">
+        这里停留显示动态绑定
+    </span>
+</div>
+
+
+<!--导入Vue.js-->
+<script src="https://cdn.jsdelivr.net/npm/vue@2.5.21/dist/vue.min.js"></script>
+<script>
+    var vm = new Vue({
+        el: "#app",
+        data: {
+            message: "Hello,VUE"
+        }
+    });
+</script>
+
+
+</body>
+</html>
