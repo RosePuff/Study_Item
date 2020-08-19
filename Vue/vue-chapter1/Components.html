@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<!--View层-->
+<div id="app">
+    <chin v-for="item in items" v-bind:Liu="item"></chin>
+</div>
+
+
+<!--导入Vue.js-->
+<script src="https://cdn.jsdelivr.net/npm/vue@2.5.21/dist/vue.min.js"></script>
+<script>
+
+    Vue.component("chin", {
+        props: ['Liu'],
+        template: ' <li>{{Liu}}</li>'
+    });
+
+    var vm = new Vue({
+        el: "#app",
+        data: {
+            items: ["java", "Linux", "前端"]
+        }
+    });
+</script>
+
+</body>
+</html>

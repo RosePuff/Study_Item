@@ -1,0 +1,25 @@
+{
+  "name": "Chin",
+  "url": "https://puffslemon.com/",
+  "page": 1,
+  "isNonProfit": true,
+  "address": {
+    "street": "中国",
+    "city": "深圳",
+    "country": "中国"
+  },
+  "links": [
+    {
+      "name": "BiliBili",
+      "url": "https://www.bilibili.com"
+    },
+    {
+      "name": "chinBool",
+      "url": "https://puffslemon.com"
+    },
+    {
+      "name": "百度",
+      "url": "https://www.baidu.com"
+    }
+  ]
+}
