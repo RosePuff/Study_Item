@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<!--View层-->
+<div id="chin">
+    <p>时间戳：{{currentTime()}}</p>
+    <p>时间戳1：{{currentTimeDemo}}</p>
+
+</div>
+
+
+<!--导入Vue.js-->
+<script src="https://cdn.jsdelivr.net/npm/vue@2.5.21/dist/vue.min.js"></script>
+<script>
+    var vm = new Vue({
+        el: "#chin",
+        data: {
+            message: "Hello,Chin"
+        },
+        methods: {
+            currentTime: function () {
+                return Date.now();
+            }
+        },
+        // 计算属性不可与上面方法重名，不然的话就只会调用methods的方法
+        computed: {
+            currentTimeDemo: function () {
+                this.message;
+                return Date.now();
+            }
+        }
+    });
+</script>
+</body>
+</html>
