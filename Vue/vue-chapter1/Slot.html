@@ -8,39 +8,53 @@
 <!--View层-->
 <div id="chin">
     <todo>
-        <todo-title slot="todo-titles" :titles="titles"></todo-title>
-        <todo-items slot="todo-items" v-for="items in todoItems" :items="items"></todo-items>
+        <todo-title slot="todo-title" :titles="titles"></todo-title>
+        <todo-items slot="todo-item" v-for="(item,index) in todoItems" :item="item" :index="index"
+                    v-on:remove="removeItem(index)" :key="index"></todo-items>
     </todo>
 </div>
 
 <!--导入Vue.js-->
 <script src="https://cdn.jsdelivr.net/npm/vue@2.5.21/dist/vue.min.js"></script>
 <script>
-    var vm = new Vue({
-        el: "#chin",
-        data: {
-            titles: "chin的书籍",
-            todoItems: ['chin', 'Java', 'Linux']
-        }
-    });
 
     Vue.component("todo", {
         template: '<div>' +
-            '<slot name="todo-titles"></slot>' +
+            '<slot name="todo-title"></slot>' +
             '<ul>' +
-            '<slot name="todo-items"></slot>' +
+            '<slot name="todo-item"></slot>' +
             '</ul>' +
             '</div>'
     });
     Vue.component("todo-title", {
-        props: ['titles'],
-        template: '<div>{{titles}}</div>'
+        props: ['title'],
+        template: '<div>{{title}}</div>'
     });
     Vue.component("todo-items", {
-        props: ['items'],
-        template: '<li>{{items}}</li>'
+        props: ['item', 'index'],
+        template: '<li>{{index}}----{{item}} <button @click="remove">删除</button></li>',
+        methods: {
+            remove: function (index) {
+                // 自定义事件分发
+                this.$emit('remove', index);
+            }
+        }
+    });
+
+    var vm = new Vue({
+        el: "#chin",
+        data: {
+            titles: "chin的书籍",
+            todoItems: ['chin', 'Java', 'Linux'],
+            methods: {
+                removeItem: function () {
+                    alert("123");
+                    console.log("删除了" + this.todoItems[index] + "OK");
+                    this.todoItems.splice(index, 1);
+                }
+            }
+        }
     });
 </script>
-
 </body>
 </html>
